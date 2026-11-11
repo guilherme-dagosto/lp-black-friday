@@ -24,3 +24,11 @@ Tudo é configurado no bloco `CONFIG`, no topo do script. Campo vazio (`""`) nã
 
 - Teste uma compra real (ou com cupom de 100%) depois de publicar.
 - A tag depende de classes da página da Guru (`MuiButton-contained`, `footer`). Se a Guru mudar o layout, pode ser preciso ajustar os seletores. Nesse caso, o checkout continua funcionando normalmente, só sem a personalização.
+
+## Preview local (para ir ajustando)
+
+```bash
+node gtm/preview-server.js
+```
+
+Abra http://localhost:8080. O servidor carrega o checkout real com a tag já injetada e recarrega a página sozinho sempre que `checkout-guru.html` é salvo. Para ver outro link de checkout, use `CHECKOUT=/pl/outro-link node gtm/preview-server.js`. **Não finalize compras pelo preview.**
